@@ -1,0 +1,108 @@
+.ContactContainer {
+    height: 100%;
+    max-width: 420px;
+    min-width: 300px;
+    flex-grow: 1;
+    background-color: #0c1317;
+    color: white;
+    border-left: 1px solid #90999e26;
+    
+
+    .header {
+        height: 60px;
+        width: 100%;
+        background-color: #202c33;               
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: white;
+
+        svg {
+            margin-right: 30px;
+        }
+    }
+
+    > *:not(:first-child) {
+        background-color: #111b21;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+
+
+    }
+
+    .imageWrapper{
+        h1 {
+            font-weight: 300;
+            font-size: 22px;
+            margin: 10px 0 5px 0
+        }
+
+        h2 {
+            font-weight: 100;
+            font-size: 18px;
+            margin: 0;
+            color: #8696a0
+        }
+        .imageContainer {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: darkorchid;
+        }
+    }
+
+    .favoritesWrapper {flex-direction: row;}
+    .descriptionWrapper {
+        align-items: flex-start;
+        
+        label:first-child {
+            color: #00a884;
+            margin-bottom: 14px;
+        }
+
+        label:last-child {
+            color: #8696a0;
+            font-size: 14px
+        }
+    }
+
+    .filesWrapper {
+        flex-direction: row;
+        cursor: pointer;
+
+        * {cursor: pointer;}
+        div {
+            display: flex;
+            align-items: center;
+            min-width: 100%;
+
+            label {
+                color: #8696a0;
+                margin-right: 5px;
+                height: min-content;
+            }
+            label:first-child{margin-right: auto;}
+            svg {
+                width: 18px;
+                height: 20px;
+                color: #8696a0;
+            }
+        }
+    }
+
+    .favoritesWrapper {
+        flex-direction: row;
+        color: #8696a0;
+        padding: 20px;
+
+        label {
+            color: #ffffff;
+            margin-right: auto;
+        }
+        svg:first-child {margin-right: 15px;}
+    }
+}

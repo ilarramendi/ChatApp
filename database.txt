@@ -1,0 +1,34 @@
+CREATE TABLE `Users` (
+  `username` varchar(100) NOT NULL UNIQUE,
+  `color` int NOT NULL,
+  `registered` tinyint(1) NOT NULL,
+  `passwd` char(255) NOT NULL,
+  `signupDate` datetime NOT NULL,
+  PRIMARY KEY (`username`));
+
+CREATE TABLE `Messages` (
+  `messageID` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `content` varchar(1500) NOT NULL,
+  `image` tinyint(1) NOT NULL,
+  `date` datetime NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `toUser` varchar(100) NULL,
+  `toGroup` int UNSIGNED NULL,
+  PRIMARY KEY (`messageID`));
+
+TODO change content in image to a message and store image url in 'image' column
+
+CREATE TABLE `Group` (
+  `groupID` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `hasImage` tinyint(1) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(1500) NOT NULL,
+  PRIMARY KEY (`groupID`)); 
+
+CREATE TABLE `belongsToGroup` (
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `groupID` int UNSIGNED NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `admin` tinyint(1) NOT NULL,
+  `color` int NOT NULL,
+  PRIMARY KEY (`id`));

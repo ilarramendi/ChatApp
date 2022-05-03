@@ -1,0 +1,53 @@
+.messagesWrapper {
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+    
+
+    #messagesContainer {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: overlay;
+        scroll-behavior: smooth;
+
+        > label {
+            justify-self: center;
+            margin: 40px auto;
+            font-size: 30px;
+            color: #9caab3;
+            display: none;
+        }
+
+        > label:first-child {display: block}
+
+        .date {
+            color: #ffffff7c;
+            background-color: #2d353b;
+            border-radius: 5px;
+            align-self: center;
+            padding: 5px;
+            margin: 5px;
+            text-decoration: none;
+            
+            &.sticky {
+                z-index: 100;
+                top: 0;
+                position: sticky;
+            }
+        }
+    }
+
+    .background {
+        opacity: 0.06;
+        height: 100%;
+        width: 100%;
+        background-image: url('../../../assets/background.png');
+    }
+}
+

@@ -1,0 +1,103 @@
+.searchContainer {
+    max-width: 300px;
+    width: 50vw;
+    min-height: 100%;
+    background-color: #111b21;
+    display: flex;
+    flex-direction: column;
+    min-width: 275px;
+    transition: width 1s;
+    border-left: 1px solid #90999e26;
+
+    .header {
+        height: 60px;
+        width: 100%;
+        background-color: #202c33;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+
+        .exit {
+            background-color: transparent;
+            border: none;
+            outline: none !important;
+            width: 28px;
+            height: 28px;
+            padding: 2px;
+            cursor: pointer;
+
+            svg {
+                width: 100%;
+                height: 100%;
+
+                path {
+                    fill: #aebac1;
+                }
+            }
+        }
+
+        h2 {
+            color: white;
+            margin: 0 0 0 20px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .inputWrapper {
+        width: 100%;
+        padding: 7px 15px;
+        border-bottom: 1px solid #8696a026;
+
+        .inputContainer {
+            border-radius: 10px;
+            width: 100%;
+            background-color: #202c33;
+            display: flex;
+            height: 35px;
+            align-items: center;
+            padding: 7px 15px;
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none !important;
+                flex-grow: 1;
+                align-items: center;
+                margin-left: 20px;
+                color: white;
+            }
+
+
+
+
+            svg {
+                height: 24px;
+                width: 24px;
+                cursor: pointer;
+                
+                path {
+                    fill: #aebac1
+                }
+
+                &.back path {fill: #00a884}
+            }
+
+        }
+    }
+}
+
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 110px);
+    overflow: overlay;
+}
+
+.emptyLabel {display: none}
+.emptyLabel:first-child {
+    display: block;
+    align-self: center;
+    margin-top: 20px;
+    color: white;
+}

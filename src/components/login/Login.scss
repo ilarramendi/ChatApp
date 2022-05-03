@@ -1,0 +1,37 @@
+.loginWrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2228;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginContainer {
+        width: 400px;
+        background-color: #202c33;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        padding: 10px;
+
+        .dataContainer {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
+
+        label {margin: 10px 10px 0 0;}
+
+    }
+
+    .buttonsContainer button {
+        margin: 30px 10px 0 10px
+    }
+
+    .errorMessage {
+        color: red;
+    }
+}
